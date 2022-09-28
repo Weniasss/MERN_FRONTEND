@@ -8,7 +8,7 @@ export const Home = () => {
 
   async function getUser() {
 	try {
-	  const response = await fetch('https://mern-app.adaptable.app/api/workouts', {
+	  const response = await fetch('https://mern-backends.herokuapp.com/api/workouts', {
 		 method: 'GET',
 		 headers: {
 			accept: 'application/json',
