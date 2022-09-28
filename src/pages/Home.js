@@ -7,7 +7,7 @@ export const Home = () => {
   const [workouts, setWorkouts] = useState(null);
 
   useEffect(() => {
-	fetch('https://mern-app.adaptable.app/api/workouts')
+	fetch('/api/workouts')
 	.then( resp => resp.json())
 	.then((data)=> {
 		setWorkouts(data)
