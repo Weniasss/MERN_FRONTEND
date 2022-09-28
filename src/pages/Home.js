@@ -8,7 +8,7 @@ export const Home = () => {
 
   async function getUser() {
 	try {
-	  const response = await fetch('https://randomuser.me/api/', {
+	  const response = await fetch('https://mern-app.adaptable.app/api/workouts', {
 		 method: 'GET',
 		 headers: {
 			accept: 'application/json',
@@ -20,6 +20,7 @@ export const Home = () => {
 	  }
  
 	  const result = await response.json();
+	  console.log('work');
 	  return result;
 	} catch (err) {
 	  console.log(err);
