@@ -8,7 +8,6 @@ export const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-		// const url = "https://mern-app.adaptable.app"
       const response = await fetch("/api/workouts");
       const json = await response.json();
 
@@ -25,8 +24,8 @@ export const Home = () => {
       <div className="workouts">
         {workouts &&
           workouts.map((workout) => (
-				<WorkoutDetails key={workout._id} workout={workout} />
-			 ))}
+            <WorkoutDetails key={workout._id} workout={workout} />
+          ))}
       </div>
     </div>
   );
