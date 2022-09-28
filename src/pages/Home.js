@@ -9,7 +9,12 @@ export const Home = () => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       const url = "https://mern-app.adaptable.app";
-      const response = await fetch(url + "/api/workouts");
+      const response = await fetch(url + "/api/workouts", {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+        },
+      });
       const json = await response.json();
 
       if (response.ok) {
